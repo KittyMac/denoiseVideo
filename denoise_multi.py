@@ -19,8 +19,8 @@ outputPath = None
 
 tempDir = "/tmp/denoise/"
 
-if False:
-	if os.path.exists(tempDir):
+if os.path.exists(tempDir):
+	if raw_input("Existing progress frames found, delete? (y/N): ") == "y":
 		shutil.rmtree(tempDir)
 
 if os.path.exists(tempDir) == False:
